@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reply</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/the-syringe-1291129_960_720.jpg">
+<div class="container">
+
+<br>
+<form action="/doctor/sendreply"  method="post" >
+<p></p>
+
+<p></p>
+<input type="hidden" name="doctorphoneNumber" th:value="${doctorphoneNumber}">
+<input type="hidden" name="patientphoneNumber" th:value="${patientphoneNumber}">
+<input type="hidden" name="doctorfirstName" th:value="${doctorfirstName}">
+<input type="hidden" name="patientfirstName" th:value="${patientfirstName}">
+<input type="hidden" name="doctorId" th:value="${doctorId}">
+<input type="hidden" name="consultation" th:value="${consultation}">
+<input type="hidden" name="specialty"   th:value="${specialty}">
+<input type="hidden" name="id" th:value="${id}">
+<div></div>
+<div class="form-group">
+<label for="myDepartment" class="text-danger lead">Solution</label>
+<textarea class="form-control style-textarea" cols="40" rows="20" id="myDepartment" placeholder="Description" name="description"></textarea>
+</div>
+
+<div>
+<button type="submit" class="btn btn-success">OK</button>
+</div>
+</form>
+<div class="lead text-success">
+<h3 th:text="${message}"></h3>
+</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

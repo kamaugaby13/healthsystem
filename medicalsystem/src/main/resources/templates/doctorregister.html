@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/newstyle.css}"/>
+</head>
+<body background="/images/gettyimages-175500251-2048x2048.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<form action="/doctor/adddoctor"  method="post" class="border1-class">
+
+<div class="form-group">
+<label for="myFname" class="danger"><b><i>FirstName</i></b></label>
+<input class="form-control" id="myFname" placeholder="FirstName" type="text" name="firstName"
+ pattern="[a-zA-Z]+" title="Firstname must be filled or contain letters only no numbers or characters!" required>
+</div>
+
+
+<div class="form-group">
+<label for="myLname" class="danger"><b><i>LastName</i></b></label>
+<input class="form-control" id="myLname" placeholder="LastName" type="text" name="lastName"
+pattern="[a-zA-Z]+" title="Lastname must be filled or contain letters only no numbers or characters!" required>
+</div>
+
+<div class="form-group">
+<label for="myPhone" class="danger"><b><i>Phone</i></b></label>
+<input class="form-control" id="myPhone" placeholder="PhoneNumber" type="text" name="phoneNumber"
+pattern="^07\d{8}$" title="Phone must be filled or be a ten digit number" required>
+</div>
+<div class="row">
+<div class="col-md-offset-1 col-md-2">
+<label for="mySpecialty" class="danger"><b><i>Speciality</i></b></label>
+<select class="custom-select first-class" name="speciality" id="mySpecialty" required>
+<option></option>
+<option value="General">General</option>
+<option value="Paediatric">Paediatrician</option>
+<option value="Optical">Optician</option>
+<option value="Dental">Dentist</option>
+<option value="E.N.T">E.N.T</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label for="myPass" class="danger"><b><i>Doctor ID</i></b></label>
+<input class="form-control" id="myPass" placeholder="ID" type="text" name="doctorId" 
+pattern="[a-zA-Z0-9]{3,}" title="Doctor Id must be filled or be a ten digit number" required>
+</div>
+<div class="form-group">
+<label for="myPassword"><b><i>Password</i></b></label>
+<input class="form-control" id="myPassword" placeholder="Password" type="password" name="password"
+pattern="[a-zA-Z0-9]{8,}" title="contain atleast 8 letters" required>
+</div>
+<input type="hidden" name="chiefId" th:value="${chiefId}">
+<div class="form-group">
+<button type="submit" class="btn btn-success">OK</button>
+</div>
+<div class="text-success lead">
+<h3 th:text="${test}"></h3>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

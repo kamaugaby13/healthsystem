@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>DIET</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+<link rel="stylesheet" th:href="@{/css/nextstyle.css}"/>
+</head>
+<body background="/images/bananas-carrots-cherries-264537.jpg">
+<div class="gapping lead text-danger">
+<h3>Here you can add dietary Information as per the dietary condition
+to add a new diet to the system as the fields guide</h3>
+</div>
+<div class="container">
+
+<div class="row">
+<div class="col-md-offset-3 col-md-9">
+<form action="/diet/savediet"  method="post"  id="dietenter">
+
+<div class="form-group">
+<label for="myCondition" class="danger"><b><i></i></b></label>
+<input class="form-control" id="myCondition" placeholder="Condition" type="text" name="condition">
+</div>
+
+<div class="form-group">
+<label for="myProtein" class="text-danger lead"></label>
+<textarea class="form-control style-textarea" cols="20" rows="10" id="myProtein" placeholder="Proteins" name="proteins"></textarea>
+</div>
+<div class="form-group">
+<label for="myCarbohydrates" class="text-danger lead"></label>
+<textarea class="form-control style-textarea" cols="20" rows="10" id="myCarbohydrates" placeholder="Carbohydrates" name="carbohydrates"></textarea>
+</div>
+<div class="form-group">
+<label for="myVitamin" class="text-danger lead"></label>
+<textarea class="form-control style-textarea" cols="20" rows="10" id="myVitamin" placeholder="Vitamin" name="vitamins"></textarea>
+</div>
+<div class="form-group">
+<label for="myAvoids" class="text-danger lead"></label>
+<textarea class="form-control style-textarea" cols="20" rows="10" id="myAvoids" placeholder="To Avoid" name="avoids"></textarea>
+</div>
+<div>
+<button type="submit" class="btn btn-success">OK</button>
+</div>
+</form>
+<div class="text-success">
+<h4 th:text=${message}></h4>
+<div>
+<h4><a href="/hospital/home">HOME</a></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

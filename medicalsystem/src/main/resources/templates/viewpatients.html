@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIEW</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background=/images/stethoscope-2617701_1920.jpg>
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-9">
+<form class="bg-info right" action="/hospital/viewpatients" method="post">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Phone" name="phoneNumber">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+<br>
+<table class="table table-dark table-hover bg-info">
+<tr class="lead text-danger" style="font-style:italic">
+<th>FIRSTNAME</th>
+<th>LASTNAME</th>
+<th>PHONENUMBER</th>
+<th>AGE</th>
+<th>REMOVE</th>
+</tr>
+<tr class="lead" th:each="patient:${myList}">
+<td th:text="${patient.firstName}"></td>
+<td th:text="${patient.lastName}"></td>
+<td th:text="${patient.phoneNumber}"></td>
+<td th:text="${patient.age}"></td>
+<td><a th:href="@{/hospital/removepatient(phoneNumber=${patient.phoneNumber})}">REMOVE</a></td>
+</tr>
+<tr>
+<td ><a th:href="@{/hospital/patient-pdf-export}" class="btn btn-primary active" role="button" aria-pressed="true">Print</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

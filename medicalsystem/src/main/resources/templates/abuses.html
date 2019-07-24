@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consult</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/the-syringe-1291129_960_720.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-9">
+<br>
+<form action="/doctor/abuse"  method="post" class="bg-info">
+<p></p>
+
+<p></p>
+<input type="hidden" name="dfirstName" th:value="${doctorfirstName}">
+<input type="hidden" name="doctorId" th:value="${doctorId}">
+
+
+<div class="form-group">
+<label for="myPhone" class="danger"><b><i>Phone</i></b></label>
+<input class="form-control" id="myPhone" placeholder="PhoneNumber" type="text" name="phoneNumber" pattern="^07\d{8}$" 
+title="Phone must be filled or be a ten digit number" required>
+
+</div>
+<div></div>
+<div class="form-group">
+<label for="myDepartment" class="text-danger lead">Description</label>
+<textarea class="form-control style-textarea" cols="10" rows="10" id="myDepartment" placeholder="Description" name="description" required></textarea>
+</div>
+
+<div>
+<button type="submit" class="btn btn-success">OK</button>
+</div>
+</form>
+<div class="lead text-success">
+<h3 th:text="${message}"></h3>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consult</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/the-syringe-1291129_960_720.jpg">
+<div class="container">
+
+<br>
+<form action="/hospital/consult"  method="post" >
+<p></p>
+
+<p></p>
+<input type="hidden" name="consultationType" th:value="${type}">
+<input type="hidden" name="firstName" th:value="${firstName}">
+<input type="hidden" name="lastName" th:value="${lastName}">
+<input type="hidden" name="phoneNumber" th:value="${phoneNumber}">
+<input type="hidden" name="age" th:value="${age}">
+<div></div>
+<div class="form-group">
+<label for="myDepartment" class="text-danger lead">Description</label>
+<textarea class="form-control style-textarea" cols="30" rows="20" id="myDepartment" placeholder="Description" name="description"></textarea>
+</div>
+
+<div>
+<button type="submit" class="btn btn-success">OK</button>
+</div>
+</form>
+<div class="lead text-success">
+<h3 th:text="${message}"></h3>
+</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>DIET</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/nextstyle.css}"/>
+</head>
+<body background="/images/composition-variety-raw-organic-vegetables-fruits-balanced-diet-composition-variety-raw-organic-vegetables-109477770.jpg">
+<br>
+<div class="container">
+<h1 class="text-danger bg-info" th:text=${diet.condition}></h1>
+<div class="lead carbohydrates div" >
+<h3>PROTEINS</h3>
+<h5 th:text="${diet.proteins}"></h5>
+</div>
+<br>
+<div class="lead carbohydrates div" >
+<h3>CARBOHYDRATES</h3>
+<h5 th:text="${diet.carbohydrates}"></h5>
+</div>
+<br>
+<div class="lead carbohydrates div" >
+<h3>VITAMINS</h3>
+<h5 th:text="${diet.vitamins}"></h5>
+</div>
+<br>
+<div class="lead carbohydrates div" >
+<h3>FOOD TO AVOID</h3>
+<h5 th:text="${diet.avoids}"></h5>
+</div>
+</div>
+</body>
+</html>

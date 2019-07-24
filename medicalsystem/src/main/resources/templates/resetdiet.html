@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RESET</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/gettyimages-175500251-2048x2048.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<br>
+<form action="/doctor/resetdiet"  method="post" class="border1-class">
+
+<div class="form-group">
+<label for="myId" class="danger"><b><i>Secret Word</i></b></label>
+<input class="form-control" id="myId" placeholder="Secret Word" type="text" name="secret" required>
+</div>
+<div class="form-group">
+<label for="myPhone" class="danger"><b><i>Chief ID</i></b></label>
+<input class="form-control" id="myPhone" placeholder="Dietician Id" type="text" name="dieticianId"
+ pattern="[a-zA-Z0-9]{3,}" title="Dietician Id must be filled or be a 3 digit number" required>
+</div>
+
+<div class="form-group">
+<label for="myPassword" class="danger"><b><i>New Password</i></b></label>
+<input class="form-control" id="myPassword" placeholder="Password" type="password" name="newPassword"
+pattern="[a-zA-Z0-9]{8,}" title="contain atleast 8 letters" required>
+</div>
+
+<div class="form-group">
+<button type="submit" class="btn btn-default">OK</button>
+</div>
+<div>
+<p class="lead text-danger" th:text="${message}"></p>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+.home-class{
+	border-width:5px;
+	border-radius:25px;
+	margin:20px;
+	padding:20px;
+	height:250px;
+	width:600px;
+	background-color:#f5f5f5;
+	
+}
+
+div *{
+	margin:12px;
+}
+
+.first-class{
+	border-width:2px;
+	border-radius:5px;
+	margin:2px;
+	padding:2px;
+	height:35px;
+	width:300px;
+	font-size: 16px;
+	font-style:italic;
+	background-color:white;
+	
+}
+.style-textarea{
+  cols: 40;
+  rows: 20;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.border1-class{
+border-width:5px;
+border-radius:25px;
+margin:25px;
+padding:10px;
+height:1000px;
+width:400px;
+background-color:#f5f5f5;	
+}

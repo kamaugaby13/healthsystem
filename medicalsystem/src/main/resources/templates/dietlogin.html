@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIETICIAN</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/gettyimages-175500251-2048x2048.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<br>
+<form action="/doctor/logindietician"  method="post" class="border1-class">
+
+<div class="form-group">
+<label for="myId" class="danger"><b><i>Dietician ID</i></b></label>
+<input class="form-control" id="myId" placeholder="ID" type="text" name="dieticianId">
+</div>
+
+<div class="form-group">
+<label for="myPassword" class="danger"><b><i>Password</i></b></label>
+<input class="form-control" id="myPassword" placeholder="Password" type="password" name="password">
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-default">OK</button>
+</div>
+<div>
+<p class="lead text-danger" th:text="${message}"></p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

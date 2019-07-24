@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHIEF</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body background="/images/gettyimages-175500251-2048x2048.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<form action="/doctor/addchief"  method="post" class="border1-class">
+
+<div class="form-group">
+<label for="myFname" class="danger"><b><i>FirstName</i></b></label>
+<input class="form-control" id="myFname" placeholder="FirstName" type="text" name="firstName">
+</div>
+
+
+<div class="form-group">
+<label for="myLname" class="danger"><b><i>LastName</i></b></label>
+<input class="form-control" id="myLname" placeholder="LastName" type="text" name="lastName">
+</div>
+
+<div class="form-group">
+<label for="myPhone" class="danger"><b><i>Phone</i></b></label>
+<input class="form-control" id="myPhone" placeholder="PhoneNumber" type="text" name="phoneNumber">
+</div>
+<div class="form-group">
+<label for="myPass" class="danger"><b><i>Chief ID</i></b></label>
+<input class="form-control" id="myPass" placeholder="ID" type="text" name="chiefId">
+</div>
+<div class="form-group">
+<label for="myPassword"><b><i>Password</i></b></label>
+<input class="form-control" id="myPassword" placeholder="Password" type="password" name="password">
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-default">OK</button>
+</div>
+</form>
+<div class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.gapping{
+	border-width:5px;
+	border-radius:25px;
+	margin:20px;
+	padding:20px;
+	height:80px;
+	width:1300px;
+	background-color:#708c98;
+}
+
+.carbohydrates{
+	border-width:2px;
+	border-radius:5px;
+	margin:2px;
+	padding:2px;
+	height:200px;
+	width:700px;
+	font-size: 16px;
+	font-style:italic;
+	background-color:#f5f5f5;
+}
+div *{
+	margin:12px;
+}
+

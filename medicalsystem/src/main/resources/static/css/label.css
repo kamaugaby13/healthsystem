@@ -1,0 +1,12 @@
+.border-class{
+	border-width:5px;
+	border-radius:25px;
+	margin:20px;
+	padding:20px;
+	height:750px;
+	width:400px;
+	background-color:#f5f5f5;
+}
+div *{
+	margin:10px;
+}
